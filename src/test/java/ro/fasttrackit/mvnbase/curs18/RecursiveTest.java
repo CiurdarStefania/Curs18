@@ -24,5 +24,12 @@ public class RecursiveTest {
         assertThat(recursiv.length(" ")).isEqualTo(0);
 
     }
+    @Test
+    @DisplayName("When single letter word is received then 1 is returned")
+    void singleLetter(){
+        assertThat(recursiv.length("a")).isEqualTo(1);
+
+
+    }
 
 }
