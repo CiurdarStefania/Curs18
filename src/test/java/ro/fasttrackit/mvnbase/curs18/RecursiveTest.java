@@ -5,6 +5,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+
 public class RecursiveTest {
     Recursiv recursiv;
     @BeforeEach
@@ -16,4 +18,11 @@ public class RecursiveTest {
     void nullThatException(){
         Assertions.assertThrows(IllegalArgumentException.class, () -> recursiv.length(null));
     }
+    @Test
+    @DisplayName("When empaty string is received THEN 0 is returned")
+    void emptyString(){
+        assertThat(recursiv.length(" ")).isEqualTo(0);
+
+    }
+
 }
